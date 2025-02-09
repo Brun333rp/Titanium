@@ -24,13 +24,13 @@ public class TitaniumItems {
     public static final RegistryObject<Item, Item> TITANIUM_HOE = ITEMS.register("titanium_hoe",
             () -> new HoeItem(TitaniumToolMaterial.INSTANCE, new Item.Properties().attributes(HoeItem.createAttributes(TitaniumToolMaterial.INSTANCE, -2.0f, -1.0f))));
     public static final RegistryObject<Item, Item> TITANIUM_HELMET = ITEMS.register("titanium_helmet",
-            () -> new ArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1)));
+            () -> new ArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), ArmorItem.Type.HELMET, new Item.Properties().stacksTo(1).durability(768)));
     public static final RegistryObject<Item, Item> TITANIUM_CHESTPLATE = ITEMS.register("titanium_chestplate",
-            () -> new ArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1)));
+            () -> new ArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), ArmorItem.Type.CHESTPLATE, new Item.Properties().stacksTo(1).durability(768)));
     public static final RegistryObject<Item, Item> TITANIUM_LEGGINGS = ITEMS.register("titanium_leggings",
-            () -> new ArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1)));
+            () -> new ArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), ArmorItem.Type.LEGGINGS, new Item.Properties().stacksTo(1).durability(768)));
     public static final RegistryObject<Item, Item> TITANIUM_BOOTS = ITEMS.register("titanium_boots",
-            () -> new ArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1)));
+            () -> new ArmorItem(TitaniumArmorMaterial.INSTANCE.asHolder(), ArmorItem.Type.BOOTS, new Item.Properties().stacksTo(1).durability(768)));
     public static final RegistryObject<Item, Item> RAW_TITANIUM = ITEMS.register("raw_titanium",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item, Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget",
