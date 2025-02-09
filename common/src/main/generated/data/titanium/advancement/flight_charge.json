@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:adventure/who_needs_rockets",
+  "criteria": {
+    "get_flight_charge": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:flight_charge"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.titanium.flight_charge.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "titanium:flight_charge"
+    },
+    "title": {
+      "translate": "advancements.titanium.flight_charge.title"
+    }
+  },
+  "requirements": [
+    [
+      "get_flight_charge"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

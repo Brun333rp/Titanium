@@ -2,6 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
+    "C": {
+      "item": "minecraft:wind_charge"
+    },
     "S": {
       "item": "titanium:end_powder"
     },
@@ -10,9 +13,9 @@
     }
   },
   "pattern": [
-    "TTT",
     "TST",
-    "TTT"
+    "SCS",
+    "TST"
   ],
   "result": {
     "count": 1,

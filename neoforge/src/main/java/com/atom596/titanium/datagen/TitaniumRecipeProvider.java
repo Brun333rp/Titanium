@@ -148,11 +148,12 @@ public class TitaniumRecipeProvider extends RecipeProvider {
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, getItemName(TitaniumItems.TITANIUM_LANTERN.get())));
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.FLIGHT_CHARGE.get(), 1)
-                .pattern("TTT")
                 .pattern("TST")
-                .pattern("TTT")
+                .pattern("SCS")
+                .pattern("TST")
                 .define('T', TitaniumItems.TITANIUM_NUGGET.get())
                 .define('S', TitaniumItems.END_POWDER.get())
+                .define('C', Items.WIND_CHARGE)
                 .unlockedBy(getItemName(TitaniumItems.FLIGHT_CHARGE.get()), has(TitaniumItems.END_POWDER.get()))
                 .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, getItemName(TitaniumItems.FLIGHT_CHARGE.get())));
     }

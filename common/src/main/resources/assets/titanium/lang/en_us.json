@@ -34,6 +34,8 @@
     "advancements.titanium.titanium_tools.description": "Construct a more durable set of tools",
     "advancements.titanium.titanium_armor.title": "An Optional Upgrade",
     "advancements.titanium.titanium_armor.description": "Harness the strength of a complete suit of titanium",
+    "advancements.titanium.flight_charge.title": "Up, Up, and Away!",
+    "advancements.titanium.flight_charge.description": "Craft the Flight Charge, allowing for near-infinite vertical movement",
 
     "tag.block.titanium_ores": "Titanium Ores"
 }

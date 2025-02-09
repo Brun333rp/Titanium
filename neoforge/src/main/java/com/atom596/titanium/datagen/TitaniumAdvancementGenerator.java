@@ -10,6 +10,7 @@ import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.common.data.AdvancementProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -39,7 +40,7 @@ public class TitaniumAdvancementGenerator implements AdvancementProvider.Advance
                 )
                 .requirements(AdvancementRequirements.allOf(List.of("got_titanium")))
                 .save(consumer,
-                        ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "get_titanium"), existingFileHelper
+                        ResourceLocation.withDefaultNamespace("get_titanium"), existingFileHelper
                 );
 
         AdvancementHolder titaniumToolsAdvancement = Advancement.Builder.advancement()
@@ -90,6 +91,28 @@ public class TitaniumAdvancementGenerator implements AdvancementProvider.Advance
                 .requirements(AdvancementRequirements.allOf(List.of("get_titanium_armor")))
                 .save(consumer,
                         ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_armor"), existingFileHelper
+                );
+
+        AdvancementHolder flightChargeAdvancement = Advancement.Builder.advancement()
+                .display(
+                        new ItemStack(TitaniumItems.FLIGHT_CHARGE.get()),
+                        Component.translatable("advancements.titanium.flight_charge.title"),
+                        Component.translatable("advancements.titanium.flight_charge.description"),
+                        null,
+                        AdvancementType.TASK,
+                        true,
+                        true,
+                        false
+                )
+                .parent(new AdvancementHolder(
+                        ResourceLocation.withDefaultNamespace("adventure/who_needs_rockets"), null
+                ))
+                .addCriterion("get_flight_charge",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(TitaniumItems.FLIGHT_CHARGE.get())
+                )
+                .requirements(AdvancementRequirements.allOf(List.of("get_flight_charge")))
+                .save(consumer,
+                        ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "flight_charge"), existingFileHelper
                 );
     }
 }

@@ -1,5 +1,5 @@
 {
-  "parent": "titanium:get_titanium",
+  "parent": "minecraft:get_titanium",
   "criteria": {
     "get_titanium_tools": {
       "conditions": {
