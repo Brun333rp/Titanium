@@ -19,19 +19,22 @@ public class TitaniumItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        this.tag(ItemTags.AXES)
-                .add(TitaniumItems.TITANIUM_AXE.get());
+        this.tag(ItemTags.AXES).add(TitaniumItems.TITANIUM_AXE.get());
 
-        this.tag(ItemTags.HOES)
-                .add(TitaniumItems.TITANIUM_HOE.get());
+        this.tag(ItemTags.HOES).add(TitaniumItems.TITANIUM_HOE.get());
 
-        this.tag(ItemTags.PICKAXES)
-                .add(TitaniumItems.TITANIUM_PICKAXE.get());
+        this.tag(ItemTags.PICKAXES).add(TitaniumItems.TITANIUM_PICKAXE.get());
 
-        this.tag(ItemTags.SHOVELS)
-                .add(TitaniumItems.TITANIUM_SHOVEL.get());
+        this.tag(ItemTags.SHOVELS).add(TitaniumItems.TITANIUM_SHOVEL.get());
 
-        this.tag(ItemTags.SWORDS)
-                .add(TitaniumItems.TITANIUM_SWORD.get());
+        this.tag(ItemTags.SWORDS).add(TitaniumItems.TITANIUM_SWORD.get());
+
+        this.tag(ItemTags.HEAD_ARMOR).add(TitaniumItems.TITANIUM_HELMET.get());
+
+        this.tag(ItemTags.CHEST_ARMOR).add(TitaniumItems.TITANIUM_CHESTPLATE.get());
+
+        this.tag(ItemTags.LEG_ARMOR).add(TitaniumItems.TITANIUM_LEGGINGS.get());
+
+        this.tag(ItemTags.FOOT_ARMOR).add(TitaniumItems.TITANIUM_BOOTS.get());
     }
 }
