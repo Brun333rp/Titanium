@@ -7,6 +7,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 
@@ -15,7 +16,7 @@ import java.util.List;
 
 public class TestingWandItem extends Item {
     public TestingWandItem() {
-        super(new Item.Properties().stacksTo(1));
+        super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
         blocks.add("Block{minecraft:iron_ore}");
         blocks.add("Block{minecraft:deepslate_iron_ore}");
         blocks.add("Block{titanium:titanium_ore}");
