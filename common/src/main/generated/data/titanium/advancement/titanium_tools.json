@@ -1,20 +1,41 @@
 {
-  "parent": "minecraft:get_titanium",
+  "parent": "titanium:get_titanium",
   "criteria": {
-    "get_titanium_tools": {
+    "get_titanium_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_titanium_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_titanium_pickaxe": {
       "conditions": {
         "items": [
           {
             "items": "titanium:titanium_pickaxe"
-          },
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_titanium_shovel": {
+      "conditions": {
+        "items": [
           {
             "items": "titanium:titanium_shovel"
-          },
-          {
-            "items": "titanium:titanium_axe"
-          },
-          {
-            "items": "titanium:titanium_hoe"
           }
         ]
       },
@@ -35,7 +56,16 @@
   },
   "requirements": [
     [
-      "get_titanium_tools"
+      "get_titanium_pickaxe"
+    ],
+    [
+      "get_titanium_shovel"
+    ],
+    [
+      "get_titanium_axe"
+    ],
+    [
+      "get_titanium_hoe"
     ]
   ],
   "sends_telemetry_event": true

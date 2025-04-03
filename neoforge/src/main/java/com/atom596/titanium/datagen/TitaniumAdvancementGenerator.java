@@ -40,7 +40,7 @@ public class TitaniumAdvancementGenerator implements AdvancementProvider.Advance
                 )
                 .requirements(AdvancementRequirements.allOf(List.of("got_titanium")))
                 .save(consumer,
-                        ResourceLocation.withDefaultNamespace("get_titanium"), existingFileHelper
+                        ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "get_titanium"), existingFileHelper
                 );
 
         AdvancementHolder titaniumToolsAdvancement = Advancement.Builder.advancement()
@@ -55,15 +55,32 @@ public class TitaniumAdvancementGenerator implements AdvancementProvider.Advance
                         false
                 )
                 .parent(getTitaniumAdvancement)
-                .addCriterion("get_titanium_tools",
+                .addCriterion("get_titanium_pickaxe",
                         InventoryChangeTrigger.TriggerInstance.hasItems(
-                                TitaniumItems.TITANIUM_PICKAXE.get(),
-                                TitaniumItems.TITANIUM_SHOVEL.get(),
-                                TitaniumItems.TITANIUM_AXE.get(),
+                                TitaniumItems.TITANIUM_PICKAXE.get()
+                        )
+                )
+                .addCriterion("get_titanium_shovel",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                TitaniumItems.TITANIUM_SHOVEL.get()
+                        )
+                )
+                .addCriterion("get_titanium_axe",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                TitaniumItems.TITANIUM_AXE.get()
+                        )
+                )
+                .addCriterion("get_titanium_hoe",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
                                 TitaniumItems.TITANIUM_HOE.get()
                         )
                 )
-                .requirements(AdvancementRequirements.allOf(List.of("get_titanium_tools")))
+                .requirements(AdvancementRequirements.allOf(List.of(
+                        "get_titanium_pickaxe",
+                        "get_titanium_shovel",
+                        "get_titanium_axe",
+                        "get_titanium_hoe"
+                )))
                 .save(consumer,
                         ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_tools"), existingFileHelper
                 );
@@ -80,15 +97,32 @@ public class TitaniumAdvancementGenerator implements AdvancementProvider.Advance
                         false
                 )
                 .parent(getTitaniumAdvancement)
-                .addCriterion("get_titanium_armor",
+                .addCriterion("get_titanium_helmet",
                         InventoryChangeTrigger.TriggerInstance.hasItems(
-                                TitaniumItems.TITANIUM_HELMET.get(),
-                                TitaniumItems.TITANIUM_CHESTPLATE.get(),
-                                TitaniumItems.TITANIUM_LEGGINGS.get(),
+                                TitaniumItems.TITANIUM_HELMET.get()
+                        )
+                )
+                .addCriterion("get_titanium_chestplate",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                TitaniumItems.TITANIUM_CHESTPLATE.get()
+                        )
+                )
+                .addCriterion("get_titanium_leggings",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
+                                TitaniumItems.TITANIUM_LEGGINGS.get()
+                        )
+                )
+                .addCriterion("get_titanium_boots",
+                        InventoryChangeTrigger.TriggerInstance.hasItems(
                                 TitaniumItems.TITANIUM_BOOTS.get()
                         )
                 )
-                .requirements(AdvancementRequirements.allOf(List.of("get_titanium_armor")))
+                .requirements(AdvancementRequirements.allOf(List.of(
+                        "get_titanium_helmet",
+                        "get_titanium_chestplate",
+                        "get_titanium_leggings",
+                        "get_titanium_boots"
+                )))
                 .save(consumer,
                         ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_armor"), existingFileHelper
                 );

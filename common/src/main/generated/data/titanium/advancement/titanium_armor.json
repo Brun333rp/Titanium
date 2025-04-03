@@ -1,20 +1,41 @@
 {
-  "parent": "minecraft:get_titanium",
+  "parent": "titanium:get_titanium",
   "criteria": {
-    "get_titanium_armor": {
+    "get_titanium_boots": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_titanium_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_titanium_helmet": {
       "conditions": {
         "items": [
           {
             "items": "titanium:titanium_helmet"
-          },
-          {
-            "items": "titanium:titanium_chestplate"
-          },
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "get_titanium_leggings": {
+      "conditions": {
+        "items": [
           {
             "items": "titanium:titanium_leggings"
-          },
-          {
-            "items": "titanium:titanium_boots"
           }
         ]
       },
@@ -35,7 +56,16 @@
   },
   "requirements": [
     [
-      "get_titanium_armor"
+      "get_titanium_helmet"
+    ],
+    [
+      "get_titanium_chestplate"
+    ],
+    [
+      "get_titanium_leggings"
+    ],
+    [
+      "get_titanium_boots"
     ]
   ],
   "sends_telemetry_event": true
