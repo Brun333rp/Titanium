@@ -1,6 +1,7 @@
 package com.atom596.titanium.mixin;
 
 import com.atom596.titanium.Titanium;
+import com.atom596.titanium.util.GeodeConfigInterface;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -19,22 +20,25 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(GeodeFeature.class)
-public class GeodeBarrelMixin {
+public class GeodeFeatureMixin {
 	@Inject(at = @At("RETURN"), method = "place")
 	private void gen_barrel(FeaturePlaceContext<GeodeConfiguration> context, CallbackInfoReturnable<Boolean> cir) {
-		WorldGenLevel structureWorldAccess = context.level();
-		RandomSource random = context.random();
-		int radius = context.config().outerWallDistance.sample(random);
+		if (((GeodeConfigInterface) context.config()).getBarrelLootTable() != null) {
+			WorldGenLevel structureWorldAccess = context.level();
 
-		BlockPos barrelPos = context.origin().offset(radius, 0, radius);
-		for(int i = 0; i < 2 * radius; i++) {
-			if(!structureWorldAccess.isEmptyBlock(barrelPos)) {
-				barrelPos = barrelPos.offset(0, 1, 0);
+			RandomSource random = context.random();
+			int radius = context.config().outerWallDistance.sample(random);
+
+			BlockPos barrelPos = context.origin().offset(radius, 0, radius);
+			for (int i = 0; i < 2 * radius; i++) {
+				if (!structureWorldAccess.isEmptyBlock(barrelPos)) {
+					barrelPos = barrelPos.offset(0, 1, 0);
+				}
 			}
-		}
 
-		structureWorldAccess.setBlock(barrelPos, Blocks.BARREL.defaultBlockState(), Block.UPDATE_CLIENTS);
-		RandomizableContainer.setBlockEntityLootTable(structureWorldAccess, random, barrelPos,
-				ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "chests/amethyst_barrel")));
+			structureWorldAccess.setBlock(barrelPos, Blocks.BARREL.defaultBlockState(), Block.UPDATE_CLIENTS);
+			RandomizableContainer.setBlockEntityLootTable(structureWorldAccess, random, barrelPos,
+					ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "chests/amethyst_barrel")));
+		}
 	}
 }
