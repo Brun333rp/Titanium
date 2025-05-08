@@ -1,12 +1,15 @@
 package com.atom596.titanium.item.testingwand;
 
+import com.atom596.titanium.Titanium;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 
@@ -18,16 +21,16 @@ public class TestingWandItem extends Item {
     public TestingWandItem() {
         super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
         
-        blocks.add("Block{minecraft:iron_ore}");
-        blocks.add("Block{minecraft:deepslate_iron_ore}");
-        blocks.add("Block{titanium:titanium_ore}");
-        blocks.add("Block{titanium:deepslate_titanium_ore}");
-        blocks.add("Block{minecraft:diamond_ore}");
-        blocks.add("Block{minecraft:deepslate_diamond_ore}");
+        blocks.add(ResourceLocation.withDefaultNamespace("iron_ore"));
+        blocks.add(ResourceLocation.withDefaultNamespace("deepslate_iron_ore"));
+        blocks.add(ResourceLocation.withDefaultNamespace("diamond_ore"));
+        blocks.add(ResourceLocation.withDefaultNamespace("deepslate_diamond_ore"));
+        blocks.add(ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_ore"));
+        blocks.add(ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "deepslate_titanium_ore"));
     }
 
     private final String descriptionId = "testing_wand.desc";
-    public List<String> blocks = new ArrayList<>();
+    public List<ResourceLocation> blocks = new ArrayList<>();
 
     @Override
     public void appendHoverText(ItemStack itemStack, TooltipContext context, List<Component> components, TooltipFlag flag) {
@@ -41,15 +44,17 @@ public class TestingWandItem extends Item {
             if (user.isCreative()) {
                 user.getCooldowns().addCooldown(this, 10);
                 if (user.isCrouching() || blocks.isEmpty()) {
+                    user.openItemGui(this.getDefaultInstance(), hand);
                 } else {
                     List<Integer> count = new ArrayList<>();
                     for (int i = 0; i < blocks.size(); i++) {
                         count.add(0);
                     }
-                    for (int x = user.getBlockX(); x < user.getBlockX() + 16; x++) {
+                    ChunkPos pos = new ChunkPos(user.blockPosition());
+                    for (int x = 16*pos.x; x < 16*(pos.x + 1); x++) {
                         for (int y = level.getMaxBuildHeight() - 1; y >= level.getMinBuildHeight(); y--) {
-                            for (int z = user.getBlockZ(); z < user.getBlockZ() + 16; z++) {
-                                String block = level.getBlockState(new BlockPos(x, y, z)).getBlock().toString();
+                            for (int z = 16*pos.z; z < 16*(pos.z + 1); z++) {
+                                ResourceLocation block = BuiltInRegistries.BLOCK.getKey(level.getBlockState(new BlockPos(x, y, z)).getBlock());
                                 if (!blocks.contains(block)) {
                                     level.setBlock(new BlockPos(x, y, z), Blocks.AIR.defaultBlockState(), 255);
                                 } else {
@@ -61,7 +66,7 @@ public class TestingWandItem extends Item {
                     }
                     user.sendSystemMessage(Component.literal("Summary of Blocks:"));
                     for (int i = 0; i < blocks.size(); i++) {
-                        user.sendSystemMessage(Component.literal(count.get(i) + " blocks of " + blocks.get(i) + "."));
+                        user.sendSystemMessage(Component.literal(count.get(i) + " blocks of " + blocks.get(i)));
                     }
                     user.sendSystemMessage(Component.literal(""));
                 }
