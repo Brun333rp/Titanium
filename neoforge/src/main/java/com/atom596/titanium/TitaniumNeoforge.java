@@ -65,8 +65,10 @@ public class TitaniumNeoforge {
     }
 
     private static void putAfter(BuildCreativeModeTabContentsEvent event, ItemLike existing, ItemLike item) {
-        event.insertAfter(existing.asItem().getDefaultInstance(),
-                item.asItem().getDefaultInstance(),
-                CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        try {
+            event.insertAfter(existing.asItem().getDefaultInstance(),
+                    item.asItem().getDefaultInstance(),
+                    CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        } catch (IllegalArgumentException ignored) {};
     }
 }
