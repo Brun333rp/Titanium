@@ -18,6 +18,9 @@
     "item.titanium.testing_wand": "Testing Wand",
     "item.titanium.testing_wand.desc": "§C§LWarning:§R§C This will destroy your world",
 
+    "item.titanium.dynamic_gear.base": "Base Material:",
+    "item.titanium.dynamic_gear.material.iron": "Iron",
+
     "block.titanium.titanium_ore": "Titanium Ore",
     "block.titanium.deepslate_titanium_ore": "Deepslate Titanium Ore",
     "block.titanium.end_titanium_ore": "End Titanium Ore",
