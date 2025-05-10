@@ -32,6 +32,9 @@ public class FlightChargeItem extends Item implements ProjectileItem {
             user.getCooldowns().addCooldown(this, 20);
             user.setDeltaMovement(user.getDeltaMovement().add(new Vec3(0, 1.5, 0)));
         }
+        if (user.getDeltaMovement().y < 0) {
+            user.setDeltaMovement(new Vec3(0, 0, 0));
+        }
         user.increaseScore(Stats.ITEM_USED.getRegistry().getId(this));
         if (!user.isCreative()) {
             user.getItemInHand(hand).shrink(1);
