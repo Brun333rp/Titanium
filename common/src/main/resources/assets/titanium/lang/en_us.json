@@ -18,7 +18,10 @@
     "item.titanium.testing_wand": "Testing Wand",
     "item.titanium.testing_wand.desc": "§C§LWarning:§R§C This will destroy your world",
 
-    "item.titanium.dynamic_gear.base": "Base Material:",
+    "item.titanium.dynamic_gear.base": "Base Material: %s",
+    "item.titanium.dynamic_gear.hold_shift": "Hold [%s] for Details",
+    "item.titanium.dynamic_gear.perks_from": "%s Base Provides:",
+    "item.titanium.dynamic_gear.no_change": "No Benefits",
     "item.titanium.dynamic_gear.material.iron": "Iron",
 
     "block.titanium.titanium_ore": "Titanium Ore",
