@@ -2,7 +2,6 @@ package com.atom596.titanium.item;
 
 import com.atom596.titanium.Titanium;
 import com.atom596.titanium.block.TitaniumBlocks;
-import com.atom596.titanium.item.dyntools.DynamicSwordItem;
 import com.atom596.titanium.item.testingwand.TestingWandItem;
 import com.atom596.titanium.regutils.RegistrationProvider;
 import com.atom596.titanium.regutils.RegistryObject;

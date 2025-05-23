@@ -2,9 +2,12 @@ package com.atom596.titanium;
 
 import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.TitaniumItems;
+import com.atom596.titanium.item.dyntools.BaseMaterialRegistry;
 import com.atom596.titanium.world.TitaniumWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.event.registry.FabricRegistryBuilder;
+import net.fabricmc.fabric.api.event.registry.RegistryAttribute;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -14,6 +17,8 @@ public class TitaniumFabric implements ModInitializer {
     
     @Override
     public void onInitialize() {
+        createRegistry();
+
         Titanium.initialize();
 
         TitaniumWorldGeneration.generateModWorldGen();
@@ -21,6 +26,11 @@ public class TitaniumFabric implements ModInitializer {
         addCreative();
 
         Titanium.LOGGER.info("Initialized Titanium by EmpressAutumn");
+    }
+
+    private void createRegistry() {
+        BaseMaterialRegistry.BASE_MATERIAL =
+                FabricRegistryBuilder.createSimple(BaseMaterialRegistry.BASE_MATERIAL_KEY).attribute(RegistryAttribute.SYNCED).buildAndRegister();
     }
 
     private void addCreative() {
