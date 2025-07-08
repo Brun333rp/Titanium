@@ -33,7 +33,12 @@ public class TitaniumBlockTagProvider extends BlockTagsProvider {
                 TitaniumBlocks.END_TITANIUM_ORE.get(),
                 TitaniumBlocks.RAW_TITANIUM_BLOCK.get(),
                 TitaniumBlocks.TITANIUM_BLOCK.get(),
-                TitaniumBlocks.TITANIUM_LANTERN.get()
+                TitaniumBlocks.TITANIUM_LANTERN.get(),
+                TitaniumBlocks.TITANIUM_BRICKS.get(),
+                TitaniumBlocks.TITANIUM_BRICK_SLAB.get(),
+                TitaniumBlocks.TITANIUM_BRICK_STAIRS.get(),
+                TitaniumBlocks.TITANIUM_BRICK_WALL.get(),
+                TitaniumBlocks.CHISELED_TITANIUM_BRICKS.get()
         );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL).add(
@@ -41,7 +46,12 @@ public class TitaniumBlockTagProvider extends BlockTagsProvider {
                 TitaniumBlocks.DEEPSLATE_TITANIUM_ORE.get(),
                 TitaniumBlocks.END_TITANIUM_ORE.get(),
                 TitaniumBlocks.RAW_TITANIUM_BLOCK.get(),
-                TitaniumBlocks.TITANIUM_BLOCK.get()
+                TitaniumBlocks.TITANIUM_BLOCK.get(),
+                TitaniumBlocks.TITANIUM_BRICKS.get(),
+                TitaniumBlocks.TITANIUM_BRICK_SLAB.get(),
+                TitaniumBlocks.TITANIUM_BRICK_STAIRS.get(),
+                TitaniumBlocks.TITANIUM_BRICK_WALL.get(),
+                TitaniumBlocks.CHISELED_TITANIUM_BRICKS.get()
         );
     }
 }

@@ -33,6 +33,11 @@ public class TitaniumBlockLootTables extends BlockLootSubProvider {
         dropSelf(TitaniumBlocks.RAW_TITANIUM_BLOCK.get());
         dropSelf(TitaniumBlocks.TITANIUM_BLOCK.get());
         dropSelf(TitaniumBlocks.TITANIUM_LANTERN.get());
+        dropSelf(TitaniumBlocks.TITANIUM_BRICKS.get());
+        dropSelf(TitaniumBlocks.TITANIUM_BRICK_SLAB.get());
+        dropSelf(TitaniumBlocks.TITANIUM_BRICK_STAIRS.get());
+        dropSelf(TitaniumBlocks.TITANIUM_BRICK_WALL.get());
+        dropSelf(TitaniumBlocks.CHISELED_TITANIUM_BRICKS.get());
         add(TitaniumBlocks.TITANIUM_ORE.get(),
                 block -> createOreDrop(TitaniumBlocks.TITANIUM_ORE.get(), TitaniumItems.RAW_TITANIUM.get()));
         add(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE.get(),

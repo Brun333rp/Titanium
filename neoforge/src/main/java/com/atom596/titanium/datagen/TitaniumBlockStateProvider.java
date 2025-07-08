@@ -4,6 +4,7 @@ import com.atom596.titanium.Titanium;
 import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.regutils.RegistryObject;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -20,6 +21,15 @@ public class TitaniumBlockStateProvider extends BlockStateProvider {
         blockWithItem(TitaniumBlocks.END_TITANIUM_ORE);
         blockWithItem(TitaniumBlocks.RAW_TITANIUM_BLOCK);
         blockWithItem(TitaniumBlocks.TITANIUM_BLOCK);
+        blockWithItem(TitaniumBlocks.TITANIUM_BRICKS);
+        /*slabBlock(TitaniumBlocks.TITANIUM_BRICK_SLAB.get(),
+                ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_bricks"),
+                ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_bricks"));
+        stairsBlock(TitaniumBlocks.TITANIUM_BRICK_STAIRS.get(),
+                ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_bricks"));
+        wallBlock(TitaniumBlocks.TITANIUM_BRICK_WALL.get(),
+                ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_bricks"));*/
+        blockWithItem(TitaniumBlocks.CHISELED_TITANIUM_BRICKS);
     }
 
     private void blockWithItem(RegistryObject<Block, Block> block) {
