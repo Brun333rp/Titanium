@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "titanium:block/titanium_brick_slab"
+    },
+    "type=double": {
+      "model": "titanium:block/titanium_bricks"
+    },
+    "type=top": {
+      "model": "titanium:block/titanium_brick_slab_top"
+    }
+  }
+}
