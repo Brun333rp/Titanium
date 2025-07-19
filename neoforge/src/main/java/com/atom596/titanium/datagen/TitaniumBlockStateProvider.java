@@ -16,7 +16,7 @@ public class TitaniumBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        ResourceLocation titaniumBlockTexture = blockTexture(TitaniumBlocks.TITANIUM_BRICKS.get());
+        ResourceLocation titaniumBricksTexture = blockTexture(TitaniumBlocks.TITANIUM_BRICKS.get());
 
         blockWithItem(TitaniumBlocks.TITANIUM_ORE);
         blockWithItem(TitaniumBlocks.DEEPSLATE_TITANIUM_ORE);
@@ -24,9 +24,9 @@ public class TitaniumBlockStateProvider extends BlockStateProvider {
         blockWithItem(TitaniumBlocks.RAW_TITANIUM_BLOCK);
         blockWithItem(TitaniumBlocks.TITANIUM_BLOCK);
         blockWithItem(TitaniumBlocks.TITANIUM_BRICKS);
-        slabBlock(TitaniumBlocks.TITANIUM_BRICK_SLAB.get(), titaniumBlockTexture, titaniumBlockTexture);
-        stairsBlock(TitaniumBlocks.TITANIUM_BRICK_STAIRS.get(), titaniumBlockTexture);
-        wallBlock(TitaniumBlocks.TITANIUM_BRICK_WALL.get(), titaniumBlockTexture);
+        slabBlock(TitaniumBlocks.TITANIUM_BRICK_SLAB.get(), titaniumBricksTexture, titaniumBricksTexture);
+        stairsBlock(TitaniumBlocks.TITANIUM_BRICK_STAIRS.get(), titaniumBricksTexture);
+        wallBlock(TitaniumBlocks.TITANIUM_BRICK_WALL.get(), titaniumBricksTexture);
         blockWithItem(TitaniumBlocks.CHISELED_TITANIUM_BRICKS);
     }
 

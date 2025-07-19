@@ -1,10 +1,12 @@
 package com.atom596.titanium.datagen;
 
 import com.atom596.titanium.Titanium;
+import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.TitaniumItems;
 import com.atom596.titanium.regutils.RegistryObject;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -36,6 +38,10 @@ public class TitaniumItemModelProvider extends ItemModelProvider {
         handheldItem(TitaniumItems.TITANIUM_AXE);
         handheldItem(TitaniumItems.TITANIUM_HOE);
         handheldItem(TitaniumItems.TESTING_WAND);
+
+        titaniumBrickDecorationBlock(TitaniumItems.TITANIUM_BRICK_SLAB, "block/slab");
+        titaniumBrickDecorationBlock(TitaniumItems.TITANIUM_BRICK_STAIRS, "block/stairs");
+        titaniumBrickDecorationBlock(TitaniumItems.TITANIUM_BRICK_WALL, "block/wall_inventory");
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item, Item> item) {
@@ -48,5 +54,14 @@ public class TitaniumItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder titaniumBrickDecorationBlock(RegistryObject<Item, BlockItem> item, String parent) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.withDefaultNamespace(parent))
+                .texture("bottom", ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "block/titanium_bricks"))
+                .texture("side", ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "block/titanium_bricks"))
+                .texture("top", ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "block/titanium_bricks"))
+                .texture("wall", ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "block/titanium_bricks"));
     }
 }
