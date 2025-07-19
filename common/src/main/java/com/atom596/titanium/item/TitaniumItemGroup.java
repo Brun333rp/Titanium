@@ -17,6 +17,11 @@ public class TitaniumItemGroup {
                     .title(Component.translatable("itemGroup.titanium.titanium_group"))
                     .displayItems((context, entries) -> {
                         entries.accept(TitaniumItems.TITANIUM_BLOCK.get());
+                        entries.accept(TitaniumItems.TITANIUM_BRICKS.get());
+                        entries.accept(TitaniumItems.TITANIUM_BRICK_SLAB.get());
+                        entries.accept(TitaniumItems.TITANIUM_BRICK_STAIRS.get());
+                        entries.accept(TitaniumItems.TITANIUM_BRICK_WALL.get());
+                        entries.accept(TitaniumItems.CHISELED_TITANIUM_BRICKS.get());
                         entries.accept(TitaniumItems.TITANIUM_ORE.get());
                         entries.accept(TitaniumItems.DEEPSLATE_TITANIUM_ORE.get());
                         entries.accept(TitaniumItems.END_TITANIUM_ORE.get());
