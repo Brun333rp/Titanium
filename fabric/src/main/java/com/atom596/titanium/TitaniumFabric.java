@@ -27,9 +27,9 @@ public class TitaniumFabric implements ModInitializer {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> {
             content.addAfter(Items.LIGHT_WEIGHTED_PRESSURE_PLATE, TitaniumItems.TITANIUM_BLOCK.get());
             content.addAfter(TitaniumItems.TITANIUM_BLOCK.get(), TitaniumItems.TITANIUM_BRICKS.get());
-            content.addAfter(TitaniumItems.TITANIUM_BRICKS.get(), TitaniumItems.TITANIUM_BRICK_SLAB.get());
-            content.addAfter(TitaniumItems.TITANIUM_BRICK_SLAB.get(), TitaniumItems.TITANIUM_BRICK_STAIRS.get());
-            content.addAfter(TitaniumItems.TITANIUM_BRICK_STAIRS.get(), TitaniumItems.TITANIUM_BRICK_WALL.get());
+            content.addAfter(TitaniumItems.TITANIUM_BRICKS.get(), TitaniumItems.TITANIUM_BRICK_STAIRS.get());
+            content.addAfter(TitaniumItems.TITANIUM_BRICK_STAIRS.get(), TitaniumItems.TITANIUM_BRICK_SLAB.get());
+            content.addAfter(TitaniumItems.TITANIUM_BRICK_SLAB.get(), TitaniumItems.TITANIUM_BRICK_WALL.get());
             content.addAfter(TitaniumItems.TITANIUM_BRICK_WALL.get(), TitaniumItems.CHISELED_TITANIUM_BRICKS.get());
         });
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(content -> {
