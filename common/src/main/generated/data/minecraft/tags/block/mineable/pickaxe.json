@@ -5,6 +5,11 @@
     "titanium:end_titanium_ore",
     "titanium:raw_titanium_block",
     "titanium:titanium_block",
-    "titanium:titanium_lantern"
+    "titanium:titanium_lantern",
+    "titanium:titanium_bricks",
+    "titanium:titanium_brick_slab",
+    "titanium:titanium_brick_stairs",
+    "titanium:titanium_brick_wall",
+    "titanium:chiseled_titanium_bricks"
   ]
 }

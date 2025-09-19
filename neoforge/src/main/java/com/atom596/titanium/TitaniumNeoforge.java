@@ -26,6 +26,11 @@ public class TitaniumNeoforge {
         ObjectSortedSet<ItemStack> entries = event.getSearchEntries();
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             putAfter(event, Items.LIGHT_WEIGHTED_PRESSURE_PLATE, TitaniumItems.TITANIUM_BLOCK.get());
+            putAfter(event, TitaniumItems.TITANIUM_BLOCK.get(), TitaniumItems.TITANIUM_BRICKS.get());
+            putAfter(event, TitaniumItems.TITANIUM_BRICKS.get(), TitaniumItems.TITANIUM_BRICK_STAIRS.get());
+            putAfter(event, TitaniumItems.TITANIUM_BRICK_STAIRS.get(), TitaniumItems.TITANIUM_BRICK_SLAB.get());
+            putAfter(event, TitaniumItems.TITANIUM_BRICK_SLAB.get(), TitaniumItems.TITANIUM_BRICK_WALL.get());
+            putAfter(event, TitaniumItems.TITANIUM_BRICK_WALL.get(), TitaniumItems.CHISELED_TITANIUM_BRICKS.get());
         }
         else if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             putAfter(event, Items.DEEPSLATE_GOLD_ORE, TitaniumItems.TITANIUM_ORE.get());

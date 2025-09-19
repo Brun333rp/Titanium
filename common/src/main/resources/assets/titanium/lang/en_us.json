@@ -30,6 +30,11 @@
     "block.titanium.raw_titanium_block": "Block of Raw Titanium",
     "block.titanium.titanium_block": "Block of Titanium",
     "block.titanium.titanium_lantern": "Titanium Lantern",
+    "block.titanium.titanium_bricks": "Titanium Plated Bricks",
+    "block.titanium.titanium_brick_slab": "Titanium Plated Brick Slab",
+    "block.titanium.titanium_brick_stairs": "Titanium Plated Brick Stairs",
+    "block.titanium.titanium_brick_wall": "Titanium Plated Brick Wall",
+    "block.titanium.chiseled_titanium_bricks": "Chiseled Titanium Plated Bricks",
 
     "itemGroup.titanium.titanium_group": "Titanium",
 

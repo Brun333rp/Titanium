@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "titanium:block/titanium_bricks",
+    "side": "titanium:block/titanium_bricks",
+    "top": "titanium:block/titanium_bricks"
+  }
+}

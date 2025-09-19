@@ -61,6 +61,16 @@ public class TitaniumItems {
             () -> new BlockItem(TitaniumBlocks.TITANIUM_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item, Item> TITANIUM_LANTERN = ITEMS.register("titanium_lantern",
             () -> new BlockItem(TitaniumBlocks.TITANIUM_LANTERN.get(), new Item.Properties()));
+    public static final RegistryObject<Item, BlockItem> TITANIUM_BRICKS = ITEMS.register("titanium_bricks",
+            () -> new BlockItem(TitaniumBlocks.TITANIUM_BRICKS.get(), new Item.Properties()));
+    public static final RegistryObject<Item, BlockItem> TITANIUM_BRICK_SLAB = ITEMS.register("titanium_brick_slab",
+            () -> new BlockItem(TitaniumBlocks.TITANIUM_BRICK_SLAB.get(), new Item.Properties()));
+    public static final RegistryObject<Item, BlockItem> TITANIUM_BRICK_STAIRS = ITEMS.register("titanium_brick_stairs",
+            () -> new BlockItem(TitaniumBlocks.TITANIUM_BRICK_STAIRS.get(), new Item.Properties()));
+    public static final RegistryObject<Item, BlockItem> TITANIUM_BRICK_WALL = ITEMS.register("titanium_brick_wall",
+            () -> new BlockItem(TitaniumBlocks.TITANIUM_BRICK_WALL.get(), new Item.Properties()));
+    public static final RegistryObject<Item, BlockItem> CHISELED_TITANIUM_BRICKS = ITEMS.register("chiseled_titanium_bricks",
+            () -> new BlockItem(TitaniumBlocks.CHISELED_TITANIUM_BRICKS.get(), new Item.Properties()));
 
     public static void init() {}
 }
