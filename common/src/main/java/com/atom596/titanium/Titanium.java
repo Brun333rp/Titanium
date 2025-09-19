@@ -1,10 +1,8 @@
 package com.atom596.titanium;
 
 import com.atom596.titanium.block.TitaniumBlocks;
-import com.atom596.titanium.item.TitaniumArmorMaterial;
-import com.atom596.titanium.item.TitaniumItemGroup;
-import com.atom596.titanium.item.TitaniumItems;
-import com.atom596.titanium.item.TitaniumPotions;
+import com.atom596.titanium.item.*;
+import com.atom596.titanium.item.dyntools.BaseMaterialRegistry;
 import org.slf4j.LoggerFactory;
 
 public class Titanium {
@@ -18,5 +16,8 @@ public class Titanium {
 		TitaniumBlocks.init();
 		TitaniumItems.init();
 		TitaniumItemGroup.init();
+		TitaniumGearBases.init();
+
+		BaseMaterialRegistry.BASE_MATERIAL.freeze();
 	}
 }
