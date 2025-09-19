@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "chiseled_titanium_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "titanium:titanium_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "titanium:chiseled_titanium_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "chiseled_titanium_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "titanium:chiseled_titanium_bricks"
+    ]
+  }
+}

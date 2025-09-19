@@ -53,5 +53,9 @@ public class TitaniumBlockTagProvider extends BlockTagsProvider {
                 TitaniumBlocks.TITANIUM_BRICK_WALL.get(),
                 TitaniumBlocks.CHISELED_TITANIUM_BRICKS.get()
         );
+
+        this.tag(BlockTags.WALLS).add(
+                TitaniumBlocks.TITANIUM_BRICK_WALL.get()
+        );
     }
 }

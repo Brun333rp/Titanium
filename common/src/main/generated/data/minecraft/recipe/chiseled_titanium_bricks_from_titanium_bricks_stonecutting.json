@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "titanium:titanium_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "titanium:chiseled_titanium_bricks"
+  }
+}

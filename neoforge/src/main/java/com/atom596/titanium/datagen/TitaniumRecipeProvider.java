@@ -40,6 +40,49 @@ public class TitaniumRecipeProvider extends RecipeProvider {
         nineBlockStorageRecipes(recipeOutput, RecipeCategory.MISC, TitaniumItems.RAW_TITANIUM.get(),
                 RecipeCategory.BUILDING_BLOCKS, TitaniumBlocks.RAW_TITANIUM_BLOCK.get());
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, TitaniumItems.TITANIUM_BRICKS.get(), 1)
+                .pattern("TT")
+                .pattern("TT")
+                .define('T', TitaniumItems.TITANIUM_INGOT.get())
+                .unlockedBy("titanium_bricks", has(TitaniumItems.TITANIUM_INGOT.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_bricks"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, TitaniumItems.TITANIUM_BRICK_STAIRS.get(), 4)
+                .pattern("T  ")
+                .pattern("TT ")
+                .pattern("TTT")
+                .define('T', TitaniumItems.TITANIUM_BRICKS.get())
+                .unlockedBy("titanium_brick_stairs", has(TitaniumItems.TITANIUM_BRICKS.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_brick_stairs"));
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, TitaniumItems.TITANIUM_BRICK_STAIRS.get(), TitaniumItems.TITANIUM_BRICKS.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, TitaniumItems.TITANIUM_BRICK_SLAB.get(), 6)
+                .pattern("TTT")
+                .define('T', TitaniumItems.TITANIUM_BRICKS.get())
+                .unlockedBy("titanium_brick_slab", has(TitaniumItems.TITANIUM_BRICKS.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_brick_slab"));
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, TitaniumItems.TITANIUM_BRICK_SLAB.get(), TitaniumItems.TITANIUM_BRICKS.get(), 2);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, TitaniumItems.TITANIUM_BRICK_WALL.get(), 6)
+                .pattern("TTT")
+                .pattern("TTT")
+                .define('T', TitaniumItems.TITANIUM_BRICKS.get())
+                .unlockedBy("titanium_brick_wall", has(TitaniumItems.TITANIUM_BRICKS.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "titanium_brick_wall"));
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, TitaniumItems.TITANIUM_BRICK_WALL.get(), TitaniumItems.TITANIUM_BRICKS.get());
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, TitaniumItems.CHISELED_TITANIUM_BRICKS.get(), 4)
+                .pattern("TT")
+                .pattern("TT")
+                .define('T', TitaniumItems.TITANIUM_BRICKS.get())
+                .unlockedBy("chiseled_titanium_bricks", has(TitaniumItems.TITANIUM_BRICKS.get()))
+                .save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Titanium.MOD_ID, "chiseled_titanium_bricks"));
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS, TitaniumItems.CHISELED_TITANIUM_BRICKS.get(), TitaniumItems.TITANIUM_BRICKS.get());
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, TitaniumItems.TITANIUM_INGOT.get(), 1)
                 .pattern("TTT")
                 .pattern("TTT")
