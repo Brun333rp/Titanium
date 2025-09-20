@@ -2,7 +2,6 @@ package com.atom596.titanium;
 
 import com.atom596.titanium.block.TitaniumBlocks;
 import com.atom596.titanium.item.*;
-import com.atom596.titanium.item.dyntools.BaseMaterialRegistry;
 import org.slf4j.LoggerFactory;
 
 public class Titanium {
@@ -17,7 +16,5 @@ public class Titanium {
 		TitaniumItems.init();
 		TitaniumItemGroup.init();
 		TitaniumGearBases.init();
-
-		BaseMaterialRegistry.BASE_MATERIAL.freeze();
 	}
 }

@@ -17,8 +17,6 @@ public class TitaniumFabric implements ModInitializer {
     
     @Override
     public void onInitialize() {
-        createRegistry();
-
         Titanium.initialize();
 
         TitaniumWorldGeneration.generateModWorldGen();
@@ -26,11 +24,6 @@ public class TitaniumFabric implements ModInitializer {
         addCreative();
 
         Titanium.LOGGER.info("Initialized Titanium by EmpressAutumn");
-    }
-
-    private void createRegistry() {
-        BaseMaterialRegistry.BASE_MATERIAL =
-                FabricRegistryBuilder.createSimple(BaseMaterialRegistry.BASE_MATERIAL_KEY).attribute(RegistryAttribute.SYNCED).buildAndRegister();
     }
 
     private void addCreative() {
