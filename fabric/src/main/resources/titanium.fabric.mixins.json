@@ -4,9 +4,7 @@
   "package": "com.atom596.titanium.mixin",
   "refmap": "${mod_id}.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [
-    "BaseMaterialRegistryMixinFabric"
-  ],
+  "mixins": [],
   "client": [],
   "server": [],
   "injectors": {

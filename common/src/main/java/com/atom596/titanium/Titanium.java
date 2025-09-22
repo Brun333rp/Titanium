@@ -15,6 +15,6 @@ public class Titanium {
 		TitaniumBlocks.init();
 		TitaniumItems.init();
 		TitaniumItemGroup.init();
-		TitaniumGearBases.init();
+		//TitaniumGearBases.init();
 	}
 }
